@@ -4,4 +4,5 @@
 http://samtinfo.ch/i14tocale/web/wordclock/
 
 - Sitografia:  
-link...
+https://fishino.it/fishino-uno-it.html : documentazione fishino uno
+https://atom.io/packages/git-plus : auto fetch GitHub
