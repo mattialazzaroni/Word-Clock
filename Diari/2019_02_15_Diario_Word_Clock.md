@@ -29,3 +29,6 @@ Nessun problema riscontrato.
 In linea con la pianificazione.
 ## Programma di massima per la prossima giornata di lavoro
 Inizio progettazione.
+
+# Gantt preventivo
+![Gantt](https://github.com/PaoloWeishaupt/Word-Clock/blob/master/Analisi/Pianificazione.png)
