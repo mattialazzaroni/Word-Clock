@@ -1,6 +1,6 @@
 # Word Clock | Diario di lavoro - 20.02.2019
 ##### Gabriele Alessi, Mattia Lazzaroni, Paolo Weishaupt
-### Canobbio, 15.02.2019
+### Canobbio, 20.02.2019
 
 ## Lavori svolti
 
