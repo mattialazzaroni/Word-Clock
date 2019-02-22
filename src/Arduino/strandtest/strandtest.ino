@@ -28,24 +28,24 @@ void setup() {
   // End of trinket special code
 
   strip.begin();
-  strip.setBrightness(50);
+  strip.setBrightness(100);
   strip.show(); // Initialize all pixels to 'off'
 }
 
 void loop() {
   // Some example procedures showing how to display to the pixels:
-  colorWipe(strip.Color(255, 0, 0), 50); // Red
-  colorWipe(strip.Color(0, 255, 0), 50); // Green
-  colorWipe(strip.Color(0, 0, 255), 50); // Blue
+  colorWipe(strip.Color(255, 0, 0), 1); // Red
+  colorWipe(strip.Color(0, 255, 0), 1); // Green
+  colorWipe(strip.Color(0, 0, 255), 1); // Blue
 //colorWipe(strip.Color(0, 0, 0, 255), 50); // White RGBW
   // Send a theater pixel chase in...
-  theaterChase(strip.Color(127, 127, 127), 50); // White
-  theaterChase(strip.Color(127, 0, 0), 50); // Red
-  theaterChase(strip.Color(0, 0, 127), 50); // Blue
+  theaterChase(strip.Color(127, 127, 127), 1); // White
+  theaterChase(strip.Color(127, 0, 0), 1); // Red
+  theaterChase(strip.Color(0, 0, 127), 1); // Blue
 
-  rainbow(20);
-  rainbowCycle(20);
-  theaterChaseRainbow(50);
+  rainbow(5);
+  rainbowCycle(5);
+  theaterChaseRainbow(5);
 }
 
 // Fill the dots one after the other with a color
