@@ -1,0 +1,150 @@
+body{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+table {
+    color: white;
+    font-family: monospace;
+    font-size: 4vw;
+    width: 100%;
+    height: 50%;
+}
+
+td{
+    width: 10%;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 50px;
+    visibility: hidden;
+}
+
+li {
+    float: left;
+}
+
+input {
+    width: 20px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    margin-top: -20%;
+    left: 0;
+    width: 100%;
+}
+
+
+.content{
+    width: 50%;
+    margin-left:auto;
+    margin-right: auto;
+    height: 50%;
+}
+
+.circle{
+    width: 15%;
+    height: 15%;
+    border-radius: 25px;
+    background: white;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.square{
+    width: 10%;
+    padding-top: 10%;
+
+}
+
+.squareTL{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.squareTR{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+}
+
+.squareBL{
+    position: absolute;
+    bottom: 5px;
+    left: 5px
+}
+
+.squareBR{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.progress {
+    height: 3%;
+    position: absolute;
+    top: 3%;
+    left: 25%;
+    width: 50%;
+    font-family: monospace;
+    text-align: center;
+    font-size: 0.5vw;
+    visibility: visible;
+
+}
+
+.progressNumber {
+    width: 1%;
+
+
+}
+
+.progressNumber:last-child{
+    border-right: none;
+}
+
+
+.active {
+    background-color: darkgrey;
+}
+
+
+.dropdown-content {
+    display: none;
+    float: right;
+    background-color: #333;
+    color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+}
+
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
