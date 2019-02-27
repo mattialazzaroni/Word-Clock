@@ -33,8 +33,16 @@ void setup() {
 }
 
 void loop() {
-    for (int i = 0; i < 195; i++) {
-      strip.setPixelColor(i, strip.Color(255,255,255));
-    }
+  // Some example procedures showing how to display to the pixels:
+  colorWipe(strip.Color(255, 0, 0), 5); // Red
+  colorWipe(strip.Color(0, 255, 0), 5); // Green
+  colorWipe(strip.Color(0, 0, 255), 5); // Blue
+}
+
+void colorWipe(uint32_t c, int wait) {
+  for(int i=0; i<strip.numPixels(); i++) {
+    strip.setPixelColor(i, c);
     strip.show();
+    delay(wait);
+  }
 }
