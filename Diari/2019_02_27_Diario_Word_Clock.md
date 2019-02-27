@@ -3,13 +3,13 @@
 ### Canobbio, 27.02.2019
 
 ## Lavori svolti
-Mattia oggi ha aggiornato il file Appunti.md e il capitolo 7.2 della documentazione.
-Gabriele ha lavorato sulla striscia di Led per cercare malfunzionamenti e provare a controllare i singoli Led.
-Paolo ha provato a collegarsi ad un server NTP per ricevere l'orario e lo ha fatto stampare sul monitor seriale.
+Mattia e Paolo oggi inseme hanno testato il modulo RTC del Fishino stampando l'ora corrente su un display LCD.
+Gabriele ha finito di analizzare i led.
+
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|13:15 - 16:30 | Progettazione |
+|13:15 - 16:30 | Implementazione |
 
 ##  Problemi riscontrati e soluzioni adottate
 Abbiamo scoperto che per definire il colore non va bene usare il tipo di variabile int, ma bisogna usare uint32_t perchè sennò i colori verde e rosso non funzionano.
@@ -31,4 +31,4 @@ void colorWipe(uint32_t c, int wait) {
 ##  Punto della situazione rispetto alla pianificazione
 In linea con la pianificazione.
 ## Programma di massima per la prossima giornata di lavoro
-Provare a usare Fishino con NeoPixel.
+Gabriele penserà come impostare i led per le parole.
