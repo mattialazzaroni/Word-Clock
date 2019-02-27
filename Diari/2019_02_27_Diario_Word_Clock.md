@@ -32,3 +32,4 @@ void colorWipe(uint32_t c, int wait) {
 In linea con la pianificazione.
 ## Programma di massima per la prossima giornata di lavoro
 Gabriele penserà come impostare i led per le parole.
+Mattia e Paolo proveranno a stampare sul display LCD l´orario scritto in parole (e non in numeri).
