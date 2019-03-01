@@ -7,7 +7,7 @@
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(195, PIN, NEO_GRB + NEO_KHZ800);
 
-int matrix[15][13] = {
+const int matrix[15][13] = {
   {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12},
   {25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13},
   {26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38},
@@ -25,6 +25,12 @@ int matrix[15][13] = {
   {182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194},
 };
 
+const uint32_t red = strip.Color(255, 0, 0);
+const uint32_t green = strip.Color(0, 255, 0);
+const uint32_t blue = strip.Color(0, 0, 255);
+const uint32_t white = strip.Color(255, 255, 255);
+const uint32_t black = strip.Color(0, 0, 0);
+
 void setup() {
   Serial.begin(9600);
   strip.begin();
@@ -33,22 +39,18 @@ void setup() {
 }
 
 void loop() {
-  strip.setPixelColor(matrix[10][10], 255, 255, 255);
-  strip.show();
-  delay(5000);
-  colorWipe(255, 0, 0);
-  colorWipe(0, 255, 0);
-  colorWipe(0, 0, 255);
-  whitePixel();
-  //colorWipe(255, 255, 255);
-
+  randPixel();
 }
 
-void colorWipe(int r, int g, int b) {
+void pixelOn(int pixel, uint32_t color) {
+  strip.setPixelColor(pixel, color);
+  strip.show();
+}
+
+void colorWipe(uint32_t color) {
   int i = 0;
   while (i < strip.numPixels()) {
-    strip.setPixelColor(i, r, g, b);
-    strip.show();
+    pixelOn(i, color);
     delay(5);
     i++;
   }
@@ -57,10 +59,33 @@ void colorWipe(int r, int g, int b) {
 void whitePixel() {
   int i = 0;
   while (i < strip.numPixels()) {
-    strip.setPixelColor(i, 255, 255, 255);
-    strip.show();
-    strip.setPixelColor(i, 0, 0, 0);
+    pixelOn(i, white);
+    pixelOn(i, black);
     delay(5);
     i++;
   }
+}
+
+void ciao() {
+  for (int i = 0; i < 3; i++) {
+    pixelOn(matrix[3][i], white);
+    pixelOn(matrix[3 + i][0], white);
+    pixelOn(matrix[5][i], white);
+    pixelOn(matrix[3 + i][4], blue);
+    pixelOn(matrix[4][6 + i], green);
+    pixelOn(matrix[3 + i][6], green);
+    pixelOn(matrix[3 + i][8], green);
+    pixelOn(matrix[2][7], green);
+    pixelOn(matrix[3][10 + i], red);
+    pixelOn(matrix[3 + i][10], red);
+    pixelOn(matrix[5][10 + i], red);
+    pixelOn(matrix[3 + i][12], red);
+  }
+}
+
+void randPixel() {
+  uint32_t c = strip.Color(random(100), random(100), random(100));
+  int randI = random(15);
+  int randJ = random(13);
+  pixelOn(matrix[randI][randJ], c);
 }
