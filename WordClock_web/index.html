@@ -1,0 +1,140 @@
+<!--WORD CLOCK-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Responsive word clock with multiple languages">
+    <meta name="keywords" content="Word clock responsive javascript">
+    <title>Word clock</title>
+    <link rel="stylesheet" href="css/pageStyle.css">
+    <script src="js/wordclock.js"></script>
+    <script src="js/seconds.js"></script>
+    <script src="js/other.js"></script>
+</head>
+<body>
+<!--CODE FOR THE 4 DOTS-->
+<div class="square squareTL"><div class="circle" id="200"></div></div>
+<div class="square squareBL"><div class="circle" id="210"></div></div>
+<div class="square squareTR"><div class="circle" id="220"></div></div>
+<div class="square squareBR"><div class="circle" id="230"></div></div>
+<!--PROGRESS BAR FRO SECONDS-->
+<table class="progress" id="progress">
+    <tr>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+        <td class="progressNumber">&#8226</td>
+    </tr>
+</table>
+<!--CODE FOR THE MENU BAR-->
+<div onmouseover="document.getElementById('menu').style.visibility = 'visible'; document.getElementById('progress').style.visibility = 'hidden';" onmouseout="document.getElementById('menu').style.visibility = 'hidden'; document.getElementById('progress').style.visibility = 'visible';">
+        <ul id="menu">
+            <li><a class="active menuItem" href="">English</a></li>
+            <li><a href="indexIT.html">Italiano</a></li>
+            <li><a href="indexDE.html">Deutsch</a></li>
+            <div class="dropdown">
+                <li style="float:right"><a onclick="showSettings()">Settings</a></li>
+                <div id="myDropDown" class="dropdown-content">
+                    On : <input type="color" id="letterColor" value="#faff00">
+                    Off : <input type="color" id="otherLetterColor" value="#474743">
+                    Back : <input type="color" id="backgroundColor" value="#000000">
+                    <p  onclick="lights()" style="display: inline; font-size: 35px">&#x1f4a1</p>
+                </div>
+            </div>
+        </ul>
+</div>
+
+
+<!--TABELLA CON LE LETTERE-->
+<div class="container">
+    <div class="content">
+
+                <table>
+                    <tr id = 10>
+                        <td>I</td><td>T'</td><td>S</td><td>D</td><td>Q</td><td>U</td><td>A</td><td>R</td><td>T</td><td>E</td><td>R</td>
+                    </tr>
+                    <tr id = 20>
+                        <td>T</td><td>W</td><td>E</td><td>N</td><td>T</td><td>Y</td><td>F</td><td>I</td><td>V</td><td>E</td><td>Y</td>
+                    </tr>
+                    <tr id = 30>
+                        <td>H</td><td>A</td><td>L</td><td>F</td><td>T</td><td>E</td><td>N</td><td>A</td><td>J</td><td>T</td><td>O</td>
+                    </tr>
+                    <tr id = 40>
+                        <td>P</td><td>A</td><td>S</td><td>T</td><td>P</td><td>+</td><td>S</td><td>E</td><td>V</td><td>E</td><td>N</td>
+                    </tr>
+                    <tr id = 50>
+                        <td>O</td><td>N</td><td>E</td><td>T</td><td>W</td><td>O</td><td>T</td><td>H</td><td>R</td><td>E</td><td>E</td>
+                    </tr>
+                    <tr id = 60>
+                        <td>F</td><td>O</td><td>U</td><td>R</td><td>F</td><td>I</td><td>V</td><td>E</td><td>S</td><td>I</td><td>X</td>
+                    </tr>
+                    <tr id = 70>
+                        <td>E</td><td>I</td><td>G</td><td>H</td><td>T</td><td>E</td><td>L</td><td>E</td><td>V</td><td>E</td><td>N</td>
+                    </tr>
+                    <tr id = 80>
+                        <td>N</td><td>I</td><td>N</td><td>E</td><td>-</td><td>T</td><td>W</td><td>E</td><td>L</td><td>V</td><td>E</td>
+                    </tr>
+                    <tr id = 90>
+                        <td>T</td><td>E</td><td>N</td><td>B</td><td>G</td><td>O'</td><td>C</td><td>L</td><td>O</td><td>C</td><td>K</td>
+                    </tr>
+                </table>
+    </div>
+</div>
+</body>
+</html>

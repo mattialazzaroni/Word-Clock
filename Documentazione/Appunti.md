@@ -18,4 +18,5 @@ http://samtinfo.ch/i14tocale/web/wordclock/
 | https://www.adafruit.com/product/2969 | ricerca informazioni LED NeoPixel | 2019-02-20 |
 | http://www.fishino.com/download-libraries-it.html | librerie - fishino | 2019-02-20 |
 | http://www.fishino.com/download-drivers-it.html | drivers - fishino | 2019-02-20 |
+| https://www.wikiinfo.net/t2800-come-funziona-rtc-del-fishino-codice | come funziona rtc del fishino | 2019-02-27 |
 
